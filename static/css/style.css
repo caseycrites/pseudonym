@@ -1,0 +1,72 @@
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.container {
+    width: 800px;
+    margin: 20px auto;
+}
+
+.header {
+    border-bottom: 1px solid black !important;
+}
+
+.header h1 {
+    font: 400 58px/58px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.subtitle h1 {
+    font-size: 18px;
+}
+
+.main {
+    padding: 0px 20px;
+    border-bottom: 1px solid black !important;
+    clear: both;
+    margin-bottom: 10px;
+}
+
+.toc {
+    padding: 0px;
+    text-align: center;
+    list-style-type: none;
+}
+
+.toc li {
+    margin-bottom: 10px;
+}
+
+.meta {
+    clear: both;
+    overflow: auto;
+}
+
+.work, .previous {
+    float: left;
+    width: 33%;
+}
+
+.author, .next {
+    float: right;
+    text-align: right;
+    width: 33%;
+}
+
+.location {
+    float: left;
+    text-align: center;
+    width: 33%;
+}
