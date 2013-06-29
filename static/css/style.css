@@ -23,7 +23,7 @@ a {
 }
 
 .header h1 {
-    font: 400 58px/58px;
+    font: 400 58px/58px 'old style tt';
     text-transform: uppercase;
     text-align: center;
 }
@@ -39,6 +39,10 @@ a {
     margin-bottom: 10px;
 }
 
+.main p {
+    font-family: 'Lato', sans-serif;
+}
+
 .toc {
     padding: 0px;
     text-align: center;
@@ -46,6 +50,7 @@ a {
 }
 
 .toc li {
+    font-family: 'old standard tt', serif;
     margin-bottom: 10px;
 }
 
