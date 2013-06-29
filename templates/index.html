@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}The Collected Works of Casey W. Crites{% endblock %}
+{% block head %}
+  {{ super() }}
+  <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+{% endblock %}
+{% block container %}
+  <div class="header">
+    <div class="subtitle">
+      <h1>The Collected Works Of</h1>
+    </div>
+    <div class="title">
+      <h1>Casey W. Crites</h1>
+    </div>
+  </div>
+  <div class="main">
+    <ul class="toc">
+      <li><a href="toc.html">Work 1</a></li>
+      <li><a href="toc.html">Work 2</a></li>
+      <li><a href="toc.html">Work 3</a></li>
+      <li><a href="toc.html">Work 4</a></li>
+    </ul>
+  </div>
+{% endblock %}

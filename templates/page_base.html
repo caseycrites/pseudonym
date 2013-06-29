@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}{{ work.name }} - Chapter {{ work.chapter.number }} - Page {{ work.chapter.page.number }}{% endblock %}
+{% block head %}
+  <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  {{ super() }}
+{% endblock %}
+{% block container %}
+  <div class="meta">
+    <div class="work"><a href="{{ work.url }}">{{ work.name }}</a></div>
+    <div class="location"><a href="{{ work.chapter.url }}">Chapter {{ work.chapter.number }}</a></div>
+    <div class="author"><a href="{{ work.author.url }}">{{ work.author.name }}</a></div>
+  </div>
+  <div class="main">
+    {% if work.chapter.page.is_title %}
+      <div class="header">
+        <h1>Chapter {{ work.chapter.number }}</h1>
+      </div>
+    {% endif %}
+    <div class="page-content">
+    {% block pagecontent %}
+    {% endblock %}
+    </div>
+  </div>
+  <div class="meta">
+    <div class="previous"><a href="{{ work.chapter.previous_page }}">&lt;&lt;</a></div>
+    <div class="location">{{ work.page.number }}</div>
+    <div class="next"><a href="{{ work.chapter.next_page }}">&gt;&gt;</a></div>
+  </div>
+{% endblock %}

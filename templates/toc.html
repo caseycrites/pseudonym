@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Work 1 - Table Of Contents{% endblock %}
+{% block head %}
+  <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+  {{ super() }}
+{% endblock %}
+{% block container %}
+  <div class="header">
+    <div class="subtitle">
+      <h1><a href="{{ work.author.url }}">Casey W. Crites</a></h1>
+    </div>
+    <div class="title">
+      <h1>{{ work.name }}</h1>
+    </div>
+  </div>
+  <div class="main">
+    <ul class="toc">
+      {% for chapter in work.chapters %}
+      <li><a href="{{ chapter.url }}">Chapter {{ chapter.number }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
