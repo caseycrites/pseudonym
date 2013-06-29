@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}The Collected Works of {{ author.name }}{% endblock %}
+{% block head %}
+  {{ super() }}
+  <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+{% endblock %}
+{% block container %}
+  <div class="header">
+    <div class="subtitle">
+      <h1>The Collected Works Of</h1>
+    </div>
+    <div class="title">
+      <h1>{{ author.name }}</h1>
+    </div>
+  </div>
+  <div class="main">
+    <ul class="toc">
+      {% for work in author.works %}
+        <li><a href="{{ work.url }}">{{ work.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
