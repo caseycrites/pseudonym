@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
-app.config.from_pyfile('config.py')
+app.config.from_object('config')
 
 AUTHOR = app.config['AUTHOR']
 
