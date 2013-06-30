@@ -1,11 +1,14 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
+app.config.from_pyfile('config.py')
+
+AUTHOR = app.config['AUTHOR']
 
 @app.route("/")
 def index():
     author = {
-        "name": "Casey W. Crites",
+        "name": AUTHOR,
         "works": [
             {
                 "url": "work1/toc/",
@@ -24,7 +27,7 @@ def toc(workslug):
     work = {
         "name": "Work 1",
         "author": {
-            "name": "Casey W. Crites",
+            "name": AUTHOR,
             "url": "/"
         },
         "chapters": [
@@ -57,7 +60,7 @@ def page(workslug, chapter, page):
         },
         "author": {
             "url": "/",
-            "name": "Casey W. Crites"
+            "name": AUTHOR,
         }
     }
     return render_template("page_base.html", page=page)
